@@ -1,5 +1,5 @@
 # MvpZhihu
-自定义简易的知乎日报
+MVP知乎日报重构
 
 ![主页](http://img.blog.csdn.net/20160711230108618)
 
