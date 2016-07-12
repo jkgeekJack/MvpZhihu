@@ -4,6 +4,7 @@ MVP知乎日报重构
 ![主页](http://img.blog.csdn.net/20160711230108618)
 
 ## Features - 特性
+  - 缓存功能
   - 典型的MVP模式
   - 不需要多余的权限
   - 没有广告
@@ -13,10 +14,9 @@ MVP知乎日报重构
 ## Dependency - 依赖
  - rxandroid:1.1.0
  - rxjava:1.1.3
- - retrofit:2.0.0-beta1
- - retrofit:adapter-rxjava:2.0.0-beta2
- - retrofit:converter-gson:2.0.0-beta2
- - pagerslidingtabstrip:1.0.1
+ - retrofit:2.0.2
+ - retrofit2:converter-gson:2.0.2
+ - retrofit2:adapter-rxjava:2.0.2
  - glide:3.5.2
 
 
