@@ -1,5 +1,7 @@
 package com.jkgeekjack.rebuildzhihu.Article;
 
+import android.content.Context;
+
 import com.jkgeekjack.rebuildzhihu.Service.ActionService;
 import com.jkgeekjack.rebuildzhihu.Service.ServiceFactory;
 import com.jkgeekjack.rebuildzhihu.util.HtmlUtils;
@@ -18,9 +20,9 @@ public class ArticlePrecenter implements ArticleContract.Precenter{
     private ArticleContract.View view;
     private ActionService service;
     private int id;
-    public ArticlePrecenter(ArticleContract.View view){
+    public ArticlePrecenter(ArticleContract.View view, Context context){
         this.view=view;
-        this.service= ServiceFactory.createRetrofitService(ActionService.class,ActionService.baseUrl);
+        this.service= ServiceFactory.createRetrofitService(ActionService.class,ActionService.baseUrl,context);
         subscription=new CompositeSubscription();
     }
     @Override

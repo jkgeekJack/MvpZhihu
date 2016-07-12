@@ -35,7 +35,7 @@ public class ArticleActivity extends BaseActivity implements ArticleContract.Vie
     public void initParms(Bundle parms) {
         Intent intent=getIntent();
         id=intent.getIntExtra("id",0);
-        precenter=new ArticlePrecenter(this);
+        precenter=new ArticlePrecenter(this,this);
         setPrecenter(precenter);
     }
 

@@ -3,8 +3,8 @@ package com.jkgeekjack.rebuildzhihu.Service;
 import com.jkgeekjack.rebuildzhihu.Article.ArticleDetailBean;
 import com.jkgeekjack.rebuildzhihu.Home.RootBean;
 
-import retrofit.http.GET;
-import retrofit.http.Path;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
 import rx.Observable;
 
 /**

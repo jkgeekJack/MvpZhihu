@@ -42,7 +42,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
     @Override
     public void doBusiness(Context mContext) {
         //创建P传入V
-        precenter=new HomePrecenter(this);
+        precenter=new HomePrecenter(this,getActivity());
         setPrecenter(precenter);
     }
 

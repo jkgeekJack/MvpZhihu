@@ -1,7 +1,10 @@
 package com.jkgeekjack.rebuildzhihu.Home;
 
+import android.content.Context;
+
 import com.jkgeekjack.rebuildzhihu.Service.ActionService;
 import com.jkgeekjack.rebuildzhihu.Service.ServiceFactory;
+import com.orhanobut.logger.Logger;
 
 import rx.Observable;
 import rx.Subscriber;
@@ -17,9 +20,9 @@ public class HomePrecenter implements HomeContract.Precenter{
     private CompositeSubscription subscription;
     private ActionService service;
     private String type;
-    public HomePrecenter(HomeContract.View view){
+    public HomePrecenter(HomeContract.View view, Context context){
         this.view=view;
-        service= ServiceFactory.createRetrofitService(ActionService.class,ActionService.baseUrl);
+        service= ServiceFactory.createRetrofitService(ActionService.class,ActionService.baseUrl,context);
         subscription=new CompositeSubscription();
     }
     @Override
@@ -46,7 +49,7 @@ public class HomePrecenter implements HomeContract.Precenter{
 
                     @Override
                     public void onError(Throwable e) {
-
+                        Logger.d(e.toString());
                     }
 
                     @Override
